@@ -1,0 +1,71 @@
+CRITICAL - 2023-10-19 21:35:05 --> Undefined property: stdClass::$contrasenia
+in APPPATH/Controllers/loggin.php on line 23.
+ 1 APPPATH/Controllers/loggin.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$contrasenia', '/var/www/html/app/Controllers/loggin.php', 23)
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\loggin->loginOn()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\loggin))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-19 21:36:36 --> Undefined property: stdClass::$contrasenia
+in APPPATH/Controllers/loggin.php on line 23.
+ 1 APPPATH/Controllers/loggin.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$contrasenia', '/var/www/html/app/Controllers/loggin.php', 23)
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\loggin->loginOn()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\loggin))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-19 21:37:16 --> Class "Firebase\JWT\JWT" not found
+in APPPATH/Controllers/loggin.php on line 56.
+ 1 APPPATH/Controllers/loggin.php(30): App\Controllers\loggin->generateToken('3', 'joe1234@utm.edu.ec', 'diseñador')
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\loggin->loginOn()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\loggin))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-19 21:38:17 --> syntax error, unexpected token "[", expecting identifier or variable or "{" or "$"
+in APPPATH/Controllers/loggin.php on line 23.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('/var/www/html/app/Controllers/loggin.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\loggin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\loggin')
+ 4 SYSTEMPATH/CodeIgniter.php(892): class_exists('\\App\\Controllers\\loggin', true)
+ 5 SYSTEMPATH/CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-19 21:39:20 --> Cannot use object of type stdClass as array
+in APPPATH/Controllers/loggin.php on line 23.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\loggin->loginOn()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\loggin))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-19 21:40:02 --> Class "Firebase\JWT\JWT" not found
+in APPPATH/Controllers/loggin.php on line 56.
+ 1 APPPATH/Controllers/loggin.php(30): App\Controllers\loggin->generateToken('3', 'joe1234@utm.edu.ec', 'diseñador')
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\loggin->loginOn()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\loggin))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-19 21:43:13 --> Class "Firebase\JWT\JWT" not found
+in APPPATH/Controllers/loggin.php on line 56.
+ 1 APPPATH/Controllers/loggin.php(30): App\Controllers\loggin->generateToken('3', 'joe1234@utm.edu.ec', 'diseñador')
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\loggin->loginOn()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\loggin))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-19 21:48:02 --> Class "Firebase\JWT\JWT" not found
+in APPPATH/Controllers/loggin.php on line 56.
+ 1 APPPATH/Controllers/loggin.php(30): App\Controllers\loggin->generateToken('3', 'joe1234@utm.edu.ec', 'diseñador')
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\loggin->loginOn()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\loggin))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-19 21:51:19 --> Class "Firebase\JWT\JWT" not found
+in APPPATH/Controllers/loggin.php on line 56.
+ 1 APPPATH/Controllers/loggin.php(30): App\Controllers\loggin->generateToken('3', 'joe1234@utm.edu.ec', 'diseñador')
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\loggin->loginOn()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\loggin))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-19 21:56:45 --> Class "Firebase\JWT\JWT" not found
+in APPPATH/Controllers/loggin.php on line 56.
+ 1 APPPATH/Controllers/loggin.php(30): App\Controllers\loggin->generateToken('3', 'joe1234@utm.edu.ec', 'diseñador')
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\loggin->loginOn()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\loggin))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

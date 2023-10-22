@@ -1,0 +1,152 @@
+ERROR - 2023-10-18 20:05:35 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_pconnect() in /var/www/html/system/Database/Postgre/Connection.php:75
+Stack trace:
+#0 /var/www/html/system/Database/BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#1 /var/www/html/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur".*,...', Array, false)
+#3 /var/www/html/app/Models/Mural_Model.php(175): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/html/app/Controllers/MuralController.php(861): App\Models\Mural_Model->obtenerMuralesAprobados()
+#5 /var/www/html/system/CodeIgniter.php(934): App\Controllers\MuralController->muralAll()
+#6 /var/www/html/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#7 /var/www/html/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-10-18 20:05:35 --> Unable to connect to the database.
+Main connection [Postgre]: Call to undefined function CodeIgniter\Database\Postgre\pg_pconnect()
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur".*, "publicar"."fecha_publicacion" as "fecha_publicacion", "publicar"."fin_publicacion" as "fin_publicacion", ARRAY_AGG(DISTINCT txt.*) AS txts, ARRAY_AGG(DISTINCT vid.*) AS videos, ARRAY_AGG(DISTINCT img.*) AS imagenes, ARRAY_AGG(DISTINCT pdfs.*) AS pdfs
+FROM "mural" as "mur"
+LEFT JOIN "txt" ON "mur"."id_mural" = "txt"."id_mural"
+LEFT JOIN "videos" AS "vid" ON "mur"."id_mural" = "vid"."id_mural"
+LEFT JOIN "imagenes" AS "img" ON "mur"."id_mural" = "img"."id_mural"
+LEFT JOIN "pdfs" ON "mur"."id_mural" = "pdfs"."id_mural"
+LEFT JOIN "publicar" ON "mur"."id_mural" = "publicar"."id_mural"
+WHERE "mur"."estado" = :mur.estado:
+GROUP BY "mur"."id_mural", "publicar"."fecha_publicacion", "publicar"."fin_publicacion"', [...], false)
+ 3 APPPATH/Models/Mural_Model.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH/Controllers/MuralController.php(861): App\Models\Mural_Model->obtenerMuralesAprobados()
+ 5 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\MuralController->muralAll()
+ 6 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 7 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-18 20:06:51 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_pconnect() in /var/www/html/system/Database/Postgre/Connection.php:75
+Stack trace:
+#0 /var/www/html/system/Database/BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#1 /var/www/html/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur".*,...', Array, false)
+#3 /var/www/html/app/Models/Mural_Model.php(175): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/html/app/Controllers/MuralController.php(861): App\Models\Mural_Model->obtenerMuralesAprobados()
+#5 /var/www/html/system/CodeIgniter.php(934): App\Controllers\MuralController->muralAll()
+#6 /var/www/html/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#7 /var/www/html/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-10-18 20:06:51 --> Unable to connect to the database.
+Main connection [Postgre]: Call to undefined function CodeIgniter\Database\Postgre\pg_pconnect()
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur".*, "publicar"."fecha_publicacion" as "fecha_publicacion", "publicar"."fin_publicacion" as "fin_publicacion", ARRAY_AGG(DISTINCT txt.*) AS txts, ARRAY_AGG(DISTINCT vid.*) AS videos, ARRAY_AGG(DISTINCT img.*) AS imagenes, ARRAY_AGG(DISTINCT pdfs.*) AS pdfs
+FROM "mural" as "mur"
+LEFT JOIN "txt" ON "mur"."id_mural" = "txt"."id_mural"
+LEFT JOIN "videos" AS "vid" ON "mur"."id_mural" = "vid"."id_mural"
+LEFT JOIN "imagenes" AS "img" ON "mur"."id_mural" = "img"."id_mural"
+LEFT JOIN "pdfs" ON "mur"."id_mural" = "pdfs"."id_mural"
+LEFT JOIN "publicar" ON "mur"."id_mural" = "publicar"."id_mural"
+WHERE "mur"."estado" = :mur.estado:
+GROUP BY "mur"."id_mural", "publicar"."fecha_publicacion", "publicar"."fin_publicacion"', [...], false)
+ 3 APPPATH/Models/Mural_Model.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH/Controllers/MuralController.php(861): App\Models\Mural_Model->obtenerMuralesAprobados()
+ 5 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\MuralController->muralAll()
+ 6 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 7 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-18 20:06:59 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_pconnect() in /var/www/html/system/Database/Postgre/Connection.php:75
+Stack trace:
+#0 /var/www/html/system/Database/BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#1 /var/www/html/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "id_mura...', Array, false)
+#3 /var/www/html/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/html/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 /var/www/html/app/Models/Mural_Model.php(37): CodeIgniter\BaseModel->findAll()
+#6 /var/www/html/app/Controllers/MuralController.php(216): App\Models\Mural_Model->getIdMural()
+#7 /var/www/html/system/CodeIgniter.php(934): App\Controllers\MuralController->getIdMurals()
+#8 /var/www/html/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#9 /var/www/html/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /var/www/html/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-18 20:06:59 --> Unable to connect to the database.
+Main connection [Postgre]: Call to undefined function CodeIgniter\Database\Postgre\pg_pconnect()
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "id_mural"
+FROM "mural"', [], false)
+ 3 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/Mural_Model.php(37): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/MuralController.php(216): App\Models\Mural_Model->getIdMural()
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\MuralController->getIdMurals()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-18 20:12:09 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_pconnect() in /var/www/html/system/Database/Postgre/Connection.php:75
+Stack trace:
+#0 /var/www/html/system/Database/BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#1 /var/www/html/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur".*,...', Array, false)
+#3 /var/www/html/app/Models/Mural_Model.php(175): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/html/app/Controllers/MuralController.php(861): App\Models\Mural_Model->obtenerMuralesAprobados()
+#5 /var/www/html/system/CodeIgniter.php(934): App\Controllers\MuralController->muralAll()
+#6 /var/www/html/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#7 /var/www/html/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-10-18 20:12:09 --> Unable to connect to the database.
+Main connection [Postgre]: Call to undefined function CodeIgniter\Database\Postgre\pg_pconnect()
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur".*, "publicar"."fecha_publicacion" as "fecha_publicacion", "publicar"."fin_publicacion" as "fin_publicacion", ARRAY_AGG(DISTINCT txt.*) AS txts, ARRAY_AGG(DISTINCT vid.*) AS videos, ARRAY_AGG(DISTINCT img.*) AS imagenes, ARRAY_AGG(DISTINCT pdfs.*) AS pdfs
+FROM "mural" as "mur"
+LEFT JOIN "txt" ON "mur"."id_mural" = "txt"."id_mural"
+LEFT JOIN "videos" AS "vid" ON "mur"."id_mural" = "vid"."id_mural"
+LEFT JOIN "imagenes" AS "img" ON "mur"."id_mural" = "img"."id_mural"
+LEFT JOIN "pdfs" ON "mur"."id_mural" = "pdfs"."id_mural"
+LEFT JOIN "publicar" ON "mur"."id_mural" = "publicar"."id_mural"
+WHERE "mur"."estado" = :mur.estado:
+GROUP BY "mur"."id_mural", "publicar"."fecha_publicacion", "publicar"."fin_publicacion"', [...], false)
+ 3 APPPATH/Models/Mural_Model.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH/Controllers/MuralController.php(861): App\Models\Mural_Model->obtenerMuralesAprobados()
+ 5 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\MuralController->muralAll()
+ 6 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 7 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-18 20:42:45 --> Error connecting to the database: Error: Call to undefined function CodeIgniter\Database\Postgre\pg_pconnect() in /var/www/html/system/Database/Postgre/Connection.php:75
+Stack trace:
+#0 /var/www/html/system/Database/BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect(true)
+#1 /var/www/html/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/html/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur".*,...', Array, false)
+#3 /var/www/html/app/Models/Mural_Model.php(175): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/html/app/Controllers/MuralController.php(861): App\Models\Mural_Model->obtenerMuralesAprobados()
+#5 /var/www/html/system/CodeIgniter.php(934): App\Controllers\MuralController->muralAll()
+#6 /var/www/html/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+#7 /var/www/html/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /var/www/html/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-10-18 20:42:46 --> Unable to connect to the database.
+Main connection [Postgre]: Call to undefined function CodeIgniter\Database\Postgre\pg_pconnect()
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT "mur".*, "publicar"."fecha_publicacion" as "fecha_publicacion", "publicar"."fin_publicacion" as "fin_publicacion", ARRAY_AGG(DISTINCT txt.*) AS txts, ARRAY_AGG(DISTINCT vid.*) AS videos, ARRAY_AGG(DISTINCT img.*) AS imagenes, ARRAY_AGG(DISTINCT pdfs.*) AS pdfs
+FROM "mural" as "mur"
+LEFT JOIN "txt" ON "mur"."id_mural" = "txt"."id_mural"
+LEFT JOIN "videos" AS "vid" ON "mur"."id_mural" = "vid"."id_mural"
+LEFT JOIN "imagenes" AS "img" ON "mur"."id_mural" = "img"."id_mural"
+LEFT JOIN "pdfs" ON "mur"."id_mural" = "pdfs"."id_mural"
+LEFT JOIN "publicar" ON "mur"."id_mural" = "publicar"."id_mural"
+WHERE "mur"."estado" = :mur.estado:
+GROUP BY "mur"."id_mural", "publicar"."fecha_publicacion", "publicar"."fin_publicacion"', [...], false)
+ 3 APPPATH/Models/Mural_Model.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH/Controllers/MuralController.php(861): App\Models\Mural_Model->obtenerMuralesAprobados()
+ 5 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\MuralController->muralAll()
+ 6 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MuralController))
+ 7 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
